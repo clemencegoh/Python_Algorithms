@@ -1,2 +1,3 @@
 # Python_Algorithms
-Repo for algorithms in python - continually growing 
+Repo for algorithms and simple projects in python.
+(continually growing) 

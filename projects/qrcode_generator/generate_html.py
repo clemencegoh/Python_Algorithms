@@ -7,10 +7,8 @@ import argparse
 
 saved_QR = {}
 
-def create_html_receipt(receipt, filepath):
-    simple_counter = 0
-    path = encoding(receipt, "temp"+str(simple_counter)+".png")
-    simple_counter += 1
+def create_html_receipt(receipt, name,  filepath):
+    path = encoding(receipt, name)
 
     with open('receipt_template.html', "r") as f:
         contents = f.read()
@@ -32,4 +30,4 @@ if __name__=='__main__':
     receipt = generate_receipt(json.dumps(data))
     print(verify_receipt(receipt))
 
-    create_html_receipt(receipt, "example.html")
+    create_html_receipt(receipt, "example1.png", "example.html")

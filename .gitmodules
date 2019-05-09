@@ -1,0 +1,6 @@
+[submodule "projects/paas_manager_django"]
+	path = projects/paas_manager_django
+	url = git@github.com:clemencegoh/paas_manager_django.git
+[submodule "projects/paas_manager_flask"]
+	path = projects/paas_manager_flask
+	url = git@github.com:clemencegoh/paas_manager_flask.git

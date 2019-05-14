@@ -4,3 +4,6 @@
 [submodule "projects/paas_manager_flask"]
 	path = projects/paas_manager_flask
 	url = git@github.com:clemencegoh/paas_manager_flask.git
+[submodule "projects/simple_django_gcp"]
+	path = projects/simple_django_gcp
+	url = git@github.com:clemencegoh/simple_django_gcp.git

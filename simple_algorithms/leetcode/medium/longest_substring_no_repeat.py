@@ -1,4 +1,6 @@
 """
+# Complete
+
 Given a string, find the length of the longest substring without repeating characters.
 
 Input: "abcabcbb"
@@ -29,23 +31,22 @@ Planning:
             " "
 """
 
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        seen_set = set()
-        longest_string = 0
-        left_pointer = 0
+def lengthOfLongestSubstring(s: str) -> int:
+    seen_set = set()
+    longest_string = 0
+    left_pointer = 0
 
-        for right_pointer in range(len(s)):
-            if s[right_pointer] not in seen_set:
-                seen_set.add(s[right_pointer])
-            else:
-                while s[left_pointer] != s[right_pointer]:
-                    seen_set.remove(s[left_pointer])
-                    left_pointer += 1
-                left_pointer += 1  # set left as next index
+    for right_pointer in range(len(s)):
+        if s[right_pointer] not in seen_set:
+            seen_set.add(s[right_pointer])
+        else:
+            while s[left_pointer] != s[right_pointer]:
+                seen_set.remove(s[left_pointer])
+                left_pointer += 1
+            left_pointer += 1  # set left as next index
 
-            # catch single char, and no repeats
-            longest_string = max(longest_string, right_pointer - left_pointer + 1)
-        return longest_string
+        # catch single char, and no repeats
+        longest_string = max(longest_string, right_pointer - left_pointer + 1)
+    return longest_string
 
 

@@ -7,3 +7,6 @@
 [submodule "projects/simple_django_gcp"]
 	path = projects/simple_django_gcp
 	url = git@github.com:clemencegoh/simple_django_gcp.git
+[submodule "projects/Long_Term_Memory"]
+	path = projects/Long_Term_Memory
+	url = git@github.com:clemencegoh/Long_Term_Memory.git

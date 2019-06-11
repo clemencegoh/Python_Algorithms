@@ -12,6 +12,11 @@ output: 3
 
 """
 class Longest2Consec:
+    """
+    Solution here:
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    """
     def solution(self, array: [int]) -> int:
         pointerA = 0
         pointerB = 0

@@ -1,2 +1,2 @@
-calendar_credentials.json
-token_pickle
+./calendar_credentials.json
+./token.pickle

@@ -10,3 +10,6 @@
 [submodule "projects/Long_Term_Memory"]
 	path = projects/Long_Term_Memory
 	url = git@github.com:clemencegoh/Long_Term_Memory.git
+[submodule "projects/Regex_Boggle"]
+	path = projects/Regex_Boggle
+	url = git@github.com:clemencegoh/Regex_Boggle.git

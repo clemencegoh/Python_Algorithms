@@ -6,11 +6,10 @@ determine how many pairs of socks with matching colors there are.
 
 :input: [10, 20, 20, 10, 10, 30, 50, 10, 20]
 :output: 3
-
-COMPLETE
 """
 
 
+# Completed
 class SockMerchantSolution:
     def solve(self, arr):
         """

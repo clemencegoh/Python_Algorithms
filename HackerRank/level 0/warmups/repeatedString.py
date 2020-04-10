@@ -14,6 +14,7 @@ There are 4 occurrences of a in the substring.
 
 import math
 
+
 class RepeatedStringSolution:
     def solve(self, s: str, n: int):
         """

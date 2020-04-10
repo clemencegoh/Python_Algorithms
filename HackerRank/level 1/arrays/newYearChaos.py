@@ -23,17 +23,41 @@ the queue into its current state!
 
 
 class NewYearChaosSolution:
-    def solve(self, arr):
-        """
-        Concept:
-            We determine that the max number of swaps per person is 2
+    def solve2(self, q):
+        moves = 0
+        q = [p - 1 for p in q]
+        for pos, item in enumerate(q):
+            if item - pos > 2:
+                print("Too chaotic")
+                return
+            for j in range(max(item - 1, 0), pos):
+                if q[j] > item:
+                    moves += 1
+        print(moves)
+                    
 
-        """
-
-        max_num_swaps = 2
-
-        return
-
+test_cases = [
+    ([2, 1, 5, 3, 4], 3),
+    ([2, 5, 1, 3, 4], "Too chaotic"),
+    # custom tests
+    ([1, 2, 3, 4, 5], 0),
+    ([2, 3, 4, 5, 1], 4),
+    ([1, 2, 5, 4, 3], 3),
+    ([3, 2, 1, 5, 4], 4),
+    ([3, 2, 5, 1, 4], 5),
+    ([3, 2, 5, 4, 1], 6),
+    ([3, 4, 5, 6, 1, 2], 8),
+    ([2, 4, 3, 5, 6, 1], 6),
+    ([1, 2, 5, 3, 7, 8, 6, 4], 7),
+]
+# [1, 2, 3, 4, 5, 6, 7, 8]
+# [1, 2, 5, 3, 4, 6, 7, 8]  # 2
+# [1, 2, 5, 3, 7, 4, 6, 8]  # 4
+# [1, 2, 5, 3, 7, 8, 4, 6]  # 6
+# [1, 2, 5, 4, 7, 8, 6, 4]  # 7
 
 sol = NewYearChaosSolution()
-print(sol.solve())
+for t in test_cases:
+    sol.solve2(t[0])
+    print("actual:", t[1])
+    print()

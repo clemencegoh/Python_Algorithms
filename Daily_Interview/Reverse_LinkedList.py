@@ -42,7 +42,7 @@ class LinkedList:
   
   
     # This function mainly calls reverseUtil() 
-    # with previous as None 
+    # with random as None 
     def reverse_recur(self): 
         if self.head is None: 
             return 

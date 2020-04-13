@@ -21,13 +21,14 @@ class CyclicFinderSolution:
         """
         Naive solution, forward then backward fill
         """
-        newarr = []
+        newarr = arr
         current_pos = 0
-        for pos in range(1, len(arr)):
+        for pos in range(len(arr)):
             if arr[pos] > arr[current_pos]:
                 for i in range(current_pos, pos):
                     newarr[i] = arr[pos]
             current_pos += 1
+        return newarr
 
 
 test_cases = [
@@ -36,5 +37,6 @@ test_cases = [
 
 sol = CyclicFinderSolution()
 for t in test_cases:
+    print("original:", t[0])
     print("output:", sol.solve(t[0]))
     print("actual:", t[1])
